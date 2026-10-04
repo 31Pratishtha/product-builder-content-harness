@@ -34,6 +34,18 @@ Does it sound like a thoughtful human builder rather than corporate copy or temp
 - jargon that hides rather than clarifies;
 - a personal story not supported by the input.
 
-## Pass rule
+## Context and flow checks
+
+Evaluate the complete draft and every alternate opening in its body context. Use evals/case-voice-context.md as a calibration reference.
+
+- Does the opening explain the situation and why it matters before referring to an artifact or a missing answer?
+- Does each sentence connect to the previous one without abrupt question-answer sequences or procedural announcements?
+- Does the piece explain its problem and approach in natural language, without a cliched maxim or guru-like hook?
+- Does each sentence add meaning? Remove unnecessary layout instructions while keeping needed evidence distinctions.
+- Is storytelling supported by the source, with plans and hypotheses expressed honestly?
+
+A material failure of context or natural flow is a voice failure even if the numeric total passes. Quote the exact failed passage and explain the effect on the reader. Human rejection overrides an earlier agent pass; preserve that disagreement for calibration.
+
+## Passing threshold
 
 No failure indicator that materially affects the piece, no score below 3, and a total of at least 20/25.

@@ -10,6 +10,7 @@ Create content from an idea, substantial source, or approved published piece. Re
 - Read knowledge/product-building-initiative.md when the topic concerns our team or product work; read knowledge/glossary.md when terminology needs clarification. Other knowledge files require a specific connection to the input.
 - Drafting: also read brand/vision.md, brand/values-and-beliefs.md, brand/voice.md, and only the requested files from platforms/linkedin.md, platforms/x.md, platforms/longform.md.
 - Evaluation: read evals/quality-rubric.md, evals/voice-rubric.md, and evals/platform-fit.md completely, using the draft and its evidence.
+- For voice evaluation, also read evals/case-voice-context.md and check complete variants against its context and flow cases. Use the linked draft examples only when needed to resolve an ambiguous judgment; do not load the whole output history.
 - Read selected prior examples and their reviews only when requested or needed to resolve voice ambiguity. Examples illustrate style; they do not establish experience for a new piece.
 - Do not routinely load the pilot plan, decision history, unrelated outputs, or all knowledge. Record each file actually read and why. Do not reread unchanged context already available in the current run.
 

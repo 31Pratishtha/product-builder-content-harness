@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-04 — Human-approved voice learning
+
+- Promoted explicit reviewer preferences for context, natural progression, and avoiding cliched or procedural openings after the content revision cycle.
+- Added concrete voice checks and a compact calibration case loaded by the generation workflow; recorded a manual check and its lack of independent validation.
+- Preserved the original feedback and draft history. No engagement results or proven storytelling benefits are inferred.
+
 ## 0.2.0 — 2026-09-27 — Stable paths and simpler context
 
 - Applied the user-approved directory redesign: flattened inputs and output runs; moved the pilot plan into evals; removed empty experiment, knowledge example/reference, and status directories.

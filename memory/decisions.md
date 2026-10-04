@@ -1,5 +1,16 @@
 # Editorial and Harness Decisions
 
+## D-005 — Context before the method, natural progression
+
+- Date and reviewer: 2026-10-04, Pratishtha.
+- Decision: Apply the user's explicit preference for context, useful storytelling, natural transitions, and avoiding cliches or unnecessary instructions to future drafts and voice checks.
+- Reason: Earlier rubric passes missed tone problems the reviewer identified, including the second X opening.
+- Evidence: outputs/2026-09-22-discovery-format-research/human-review.md; memory/learning-review-2026-10-04-natural-voice.md.
+- Destinations: brand/voice.md, evals/voice-rubric.md, evals/case-voice-context.md, workflows/generate-content.md.
+- Scope: editorial preference across platforms; no invented stories, mandatory narrative template, or audience-performance claim.
+- Confidence: high on the stated preference; effect on unseen drafts remains untested.
+- Review date: after the next three distinct content runs, or earlier on human correction.
+
 ## D-004 — Stable content paths and consolidated feedback
 
 - Date: 2026-09-27

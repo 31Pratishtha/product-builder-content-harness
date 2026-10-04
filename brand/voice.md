@@ -25,7 +25,21 @@ Our voice should feel like a thoughtful builder thinking clearly in public: dire
 - Sound like practitioners, not gurus.
 - Invite useful disagreement when the question is genuinely open.
 
-## Preferred phrases and patterns
+## Context and natural flow
+
+- Give a reader outside the project enough context to understand who is doing what and why before introducing a worksheet, framework, or hypothetical example.
+- Where useful, guide the reader from the problem through the reasoning to the proposed or observed solution. Let the available evidence determine the story; never invent an experience to create a narrative.
+- Connect sentences naturally. Avoid abrupt chains of short questions, instructional fragments, and repeated announcements of what comes next.
+- Avoid cliched, quote-like openings and guru language. Name the concrete activity or problem instead of polishing a generalization into a hook.
+- Remove sentences that prescribe unnecessary formatting or repeat an idea without adding meaning. Preserve any factual distinction the reader actually needs.
+- Express uncertainty where it matters in the explanation. Do not crowd every caveat into the opening or imply that a planned experiment has happened.
+- Directness includes enough context to follow the thought. Short copy and reference material need not follow a fixed story formula.
+
+Approved editorial direction: D-005 in memory/decisions.md, based on the October 4 review. These are preferences, not measured engagement findings.
+
+## Phrase examples
+
+Use these only when they fit the thought; they are not required stock phrases.
 
 - “Our current hypothesis is…”
 - “We chose X because…”
