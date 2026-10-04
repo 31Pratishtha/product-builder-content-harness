@@ -1,19 +1,15 @@
 # Memory Policy
 
-Memory is curated evidence, not a transcript dump.
+Individual feedback belongs in the relevant output run's human-review.md or dated performance record. Capture proposed learning in the review's Memory candidates section.
 
-## Three levels
+Use workflows/learn-from-feedback.md to create a dated learning-review-<review-id>.md only when there is real feedback to review. Record evidence, counter-evidence, confidence, alternatives, scope, proposed exact edits, and pending human decisions.
 
-1. Run-local candidate: stored in a content pack.
-2. Durable learning: supported by repeated evidence or an explicit human decision.
-3. Canonical rule: promoted into a brand, platform, workflow, or evaluation file after human approval.
+Generation may propose improvements but cannot promote them. Repeated evidence or a serious failure makes a proposal eligible; explicit human approval is still required.
 
-## Rules
+After approval, put operative guidance in its authoritative brand, strategy, knowledge, platform, workflow, or evaluation file. Record the decision and evidence in decisions.md. Do not create parallel rule lists in wins, failures, or learnings files.
 
-- Generation workflows may propose memory but may not promote it.
-- Weekly learning also requires explicit human approval before promotion. Repeated evidence or a serious risk makes a proposal eligible, not automatically approved.
-- Every durable learning cites its supporting content IDs or reviews.
-- Conflicting evidence is preserved.
-- A learning can be revised or retired.
-- Metrics without context do not become rules.
-- Published history is never rewritten to match a new rule.
+Every decision should identify its date, reviewer, scope, supporting content IDs or source references, destination, rationale, and review date. Preserve superseded decisions and conflicting evidence. A decision can be revised or retired without rewriting historical content.
+
+Load decision history only when understanding or changing a rule requires it. Routine generation reads the current canonical guidance.
+
+Legacy memory-candidates.md files remain preserved in their original content runs and may be read during learning review.

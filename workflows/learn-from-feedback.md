@@ -1,39 +1,26 @@
 # Workflow: Learn from Feedback
 
-## Frequency
+## Frequency and context
 
 Run weekly after at least one item has received human review or audience feedback.
 
-## Inputs
-
-- human reviews from the period;
-- published final versions;
-- performance records;
-- qualitative comments or conversations;
-- memory candidates from generation runs;
-- relevant rejected drafts.
+Read memory/README.md and relevant entries in memory/decisions.md. Read reviews, edited variants, published snapshots, performance records, rejected drafts, and learning proposals from the period. Legacy memory-candidates.md files remain valid evidence. Load only the canonical files affected by a proposed change.
 
 ## Procedure
 
-1. Compare generated drafts with human-edited versions.
-2. Group edits by reason: factual, voice, structure, clarity, usefulness, platform fit, confidentiality, or taste.
-3. Identify repeated patterns. Do not generalize from one weak signal.
-4. For each proposed learning, record:
-   - evidence;
-   - number of supporting instances;
-   - possible alternative explanation;
-   - confidence: low, medium, or high;
-   - proposed destination file;
-   - proposed exact change.
-5. A learning is eligible for human-approved promotion only when:
-   - it appears in at least three independent instances; or
-   - one instance reveals a serious factual, ethical, legal, confidentiality, or reputational risk; or
-   - a human explicitly makes a durable editorial decision.
-6. Prefer adding a narrow rule over rewriting the brand broadly.
-7. Write proposals to `experiments/runs/<review-id>/learning-review.md`, including evidence, exact proposed edits, and pending decisions. Use a new review ID if the directory exists. Stop for explicit human approval before changing durable memory or canonical rules; eligibility alone is not approval.
-8. After approval, record the reviewer, date, accepted/rejected/deferred outcome, and reason in the review. Add accepted changes to `memory/learnings.md` and `memory/decisions.md`, and apply only explicitly approved brand, platform, workflow, or evaluation changes. Submit durable changes through a GitHub pull request for review.
-9. Record the harness change in `CHANGELOG.md`.
+1. Compare original drafts with human edits. Group reasons: factual, voice, structure, clarity, usefulness, platform fit, confidentiality, taste, or timing.
+2. Identify repeated patterns and preserve conflicting evidence. Do not generalize from one weak signal.
+3. For each proposal, record supporting content IDs and passages, independent instance count, counter-evidence, alternative explanations, confidence, scope, exact destination file, and exact proposed edit.
+4. A proposal is eligible when supported by three independent instances, one serious factual/ethical/legal/confidentiality/reputational failure, or an explicit durable editorial decision by a human. Eligibility alone is not approval.
+5. Write memory/learning-review-<review-id>.md with pending decisions. If it exists, ask for a new ID before writing. Prefer narrow, evidence-supported edits.
+6. Obtain explicit human approval before changing durable memory or canonical rules.
+7. Append the reviewer, date, accepted/rejected/deferred outcome, and reason to the learning review.
+8. Apply only approved edits to their authoritative brand, strategy, knowledge, platform, workflow, or evaluation file. Record the decision, rationale, evidence, scope, destination, and review date in memory/decisions.md. Preserve superseded decisions and link their replacements.
+9. Record the change in CHANGELOG.md. For a rule or workflow change, compare against relevant existing evaluation cases before release and record results under evals/. If none exist, record that testing gap rather than inventing results.
+10. Submit durable changes through a GitHub pull request for review. If remote access is unavailable, preserve the local proposal and report that the review step remains pending.
 
-## Important distinction
+## Interpretation
 
-Low performance does not automatically mean poor content. Consider topic, timing, distribution, audience size, format, and sample size before changing a rule.
+Consider topic, timing, distribution, audience size, format, and sample size before attributing performance to writing quality. A model score, an isolated successful post, or a proposed learning does not authorize a permanent rule.
+
+Feedback remains in its original run. Learning reviews summarize and link evidence; decisions record why an approved change was made. Operational guidance lives in its destination file.

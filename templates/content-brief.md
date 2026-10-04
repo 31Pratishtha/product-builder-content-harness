@@ -5,7 +5,7 @@ owner:
 input_type: idea
 requested_platforms: [linkedin, x]
 content_pillar:
-status: inbox
+source_references: []
 related_product:
 confidentiality: public-safe
 ---

@@ -53,3 +53,13 @@ Choose one:
 - narrow the brand or audience;
 - automate a repeated mechanical step;
 - stop the experiment if the process creates more overhead than value.
+
+## Records and comparisons
+
+Create records only when work is performed; do not create empty baseline or results directories. Save manual baselines as `evals/baseline-<id>.md`, reusable cases as `evals/case-<id>.md`, and comparisons as `evals/result-<id>.md`. Use unused IDs and preserve earlier measurements.
+
+Cases should include complete evidence, incomplete metadata, unsupported claims, conflicting sources, confidentiality, repurposing, and independent platform approvals. Record expected behavior and human scoring criteria before comparing outputs.
+
+Compare the same inputs using the normal process, a simple prompt baseline, and the harness. Record model/settings, harness version and uncommitted changes, loaded context, reviewer edits, time to approval, and actual token/cost data when exposed. Mark unavailable measurements unknown. Repeat comparisons when variability could change the conclusion; retain all attempts rather than selecting only the best.
+
+Report hard-gate failures separately from editorial scores. Measure time and cost per approved piece, including failed attempts. Use relevant cases to check changes to prompts, workflows, context selection, and models before adopting them. These records assess quality and efficiency; rubric scores never grant publication approval.

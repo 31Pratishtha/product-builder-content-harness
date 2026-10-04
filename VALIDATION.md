@@ -1,5 +1,35 @@
 # Scaffold Validation
 
+## Current structure — 2026-09-27
+
+The user approved implementation of the proposed ten-directory redesign. Existing uncommitted content and prior changelog history were preserved.
+
+### Migration map
+
+| Historical location | Current location |
+| --- | --- |
+| brainstorms/2026-09-22-product-psychology-and-discovery.md | inputs/2026-09-22-product-psychology-and-discovery.md |
+| inputs/inbox/2026-09-22-discovery-format-research.md | inputs/2026-09-22-discovery-format-research.md |
+| outputs/drafts/2026-09-22-discovery-format-research/ | outputs/2026-09-22-discovery-format-research/ |
+| strategy/experiment-plan.md | evals/pilot-plan.md |
+| workflows/idea-to-content-pack.md | workflows/generate-content.md (idea branch) |
+| workflows/source-to-content-pack.md | workflows/generate-content.md (source branch) |
+| workflows/repurpose-published-content.md | workflows/generate-content.md (repurpose branch) |
+
+Existing input and output text was preserved byte for byte during migration, including draft filenames, sources, evaluation, review, and memory candidates. References inside those historical artifacts resolve through this map; they are not instructions to recreate obsolete folders. The original implementation plan and the September 18 report below document the earlier layout.
+
+New runs use versioned platform drafts. The existing run retains linkedin.md, x.md, and longform.md so its original evaluation and review references stay meaningful.
+
+Empty placeholders and the empty decision-map run directory were removed. No approved or published content existed in the removed status folders. Unused memory log templates were removed after confirming they held no operational entries; existing decisions remain preserved.
+
+### Validation scope
+
+Migration checks compare file hashes and inspect current workflow references, directory layout, collision rules, versioned revisions, per-platform approval, and learning approval requirements. These are structural checks, not an executed content pilot. Quality, voice calibration, token savings, publication, and audience outcomes still require real runs.
+
+Completed checks: all migrated files matched their pre-move SHA-256 hashes before guidance edits; all 15 historical run artifacts and both inputs remain present; the ten expected main directories exist; 27 active guidance files have no missing static file references or obsolete operational paths; git diff --check passed. Historical references in preserved content and earlier reports intentionally remain documented by the migration map.
+
+## Historical scaffold report — 2026-09-18
+
 Date: 2026-09-18
 
 ## Delivery status
@@ -24,7 +54,7 @@ The existing GitHub repository is linked through SSH as `origin`. SSH access suc
 
 11 `.gitkeep` files preserve empty directories: `knowledge/examples/approved/`, `knowledge/examples/rejected/`, `knowledge/references/`, `inputs/inbox/`, `inputs/active/`, `inputs/processed/`, `outputs/drafts/`, `outputs/approved/`, `outputs/published/`, `experiments/baseline/`, and `experiments/runs/`.
 
-Also added `.gitignore` and this report. The supplied implementation document remains unchanged. Total intended tracked files: 48.
+Also added `.gitignore` and this report. A later update added `brainstorms/README.md` for pre-brief idea capture. The supplied implementation document remains unchanged.
 
 ## Checks performed
 

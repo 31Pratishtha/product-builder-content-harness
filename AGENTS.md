@@ -36,12 +36,14 @@ Turn genuine product-building work into clear, useful, evidence-aware content wh
 
 - Never overwrite an input.
 - Never overwrite published content.
-- Write each run into its own content-ID directory.
-- Before writing, check for an existing run directory. If it exists, stop and ask for a new content ID; do not overwrite or merge runs.
-- Record the content ID, input paths or source references, requested platforms, and harness Git commit (or version when Git is unavailable) in `source-analysis.md`.
-- Proposed memory changes go into the run's `memory-candidates.md`; only the weekly learning workflow may promote them after explicit human approval.
+- Write each new run to `outputs/<content-id>/`, at a stable path for its entire lifecycle.
+- Before creating a run, check for an existing directory. If it exists, stop and ask for a new content ID; do not overwrite or merge runs. An explicitly requested revision belongs to the existing run as a new unused variant filename; preserve originals and append its evaluation and review.
+- Record the content ID, owner, input paths or source references, requested platforms, audience, pillar, confidentiality, loaded context files and reasons, and harness Git commit (or version when Git is unavailable) in `source-analysis.md`. Note uncommitted changes. Record model settings and actual usage when available; otherwise mark them unknown.
+- Proposed memory changes go in the run's `human-review.md` under Memory candidates. Legacy `memory-candidates.md` files remain historical evidence. Only the learning workflow may promote proposals after explicit human approval.
 - Required input metadata: content ID, owner, requested platforms, and confidentiality. Missing metadata or material evidence returns `blocked-needs-input` with specific questions before drafting.
 - Keep input and original draft files intact. Save a requested revision as a separately named variant and identify it in the evaluation and review.
+- Capture raw notes and completed briefs in `inputs/`; raw capture may be incomplete, but generation requires the metadata and evidence above. Complete a brief separately rather than overwriting an original note.
+- Approval is per platform and exact variant. Save approved and published snapshots in the same run, preserve prior decisions, and never infer approval for a newer revision.
 
 ## Human authority
 

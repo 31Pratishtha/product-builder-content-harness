@@ -1,35 +1,28 @@
 # Workflow: Review and Publish
 
-## Purpose
+## Context
 
-Turn a generated draft into a factually approved, voice-aligned final artifact while preserving the human decisions that matter.
+Read AGENTS.md, the run's source-analysis.md, relevant sources, all variants being considered, evaluation.md, human-review.md, and the applicable brand/platform guidance. Load templates/performance-record.md only when recording publication or performance.
 
-## Human review sequence
+## Human review
 
-1. Factual check: Is every claim supportable?
-2. Confidentiality check: Is any employer, customer, team, or product information unsafe to publish?
-3. Voice check: Does this sound like something we would genuinely say?
-4. Usefulness check: What will the intended reader understand or do differently?
-5. Platform check: Does the structure fit how the platform is read?
-6. Taste check: Are we proud to attach our names to it?
+Review factual support, confidentiality, voice, usefulness, platform fit, and taste. Record each platform independently in human-review.md with reviewer, date, selected variant, material edits and reasons.
 
-## Outcomes
+Outcomes: approve, approve-with-edits, revise, reject, or hold. A held X draft does not block an approved LinkedIn draft. Generation and rubric scores cannot supply human approval.
 
-- `approve`: no material changes needed;
-- `approve-with-edits`: human edits are required and recorded;
-- `revise`: return once with specific reasons;
-- `reject`: preserve the draft and record why;
-- `hold`: good material, wrong timing or insufficient evidence.
+## Revisions and approval
 
-## On approval
+- Preserve original drafts and review decisions. Append dated review entries instead of replacing prior decisions.
+- Save a requested revision as <platform>-v<N>.md using the next unused number; evaluate it under workflows/generate-content.md.
+- For approve-with-edits, apply edits to a separately named variant, record them, evaluate the resulting variant, and obtain human confirmation of its exact final copy.
+- After explicit approval, copy the exact chosen text to outputs/<content-id>/<platform>-approved-v<N>.md. Record that path and the source variant in the review.
+- Approval attaches to that exact copy; later revisions require their own review.
+- If any target filename exists, stop for a new revision identifier. Never overwrite draft, approved, or published snapshots.
 
-- Review each platform independently in `human-review.md`, identifying the chosen variant, reviewer, date, edits, and outcome. A held or rejected X draft does not block an approved LinkedIn draft.
-- For `approve-with-edits`, apply and record the edits and obtain human confirmation of the exact final copy before treating it as ready to publish.
-- Copy the exact final copy to `outputs/approved/<content-id>/<platform>/content.md` and its completed review to `human-review.md` in that platform directory.
-- Preserve the original draft and evaluation.
-- Complete `human-review.md`.
-- Only after a human reports actual publication, copy the exact public text to `outputs/published/<content-id>/<platform>/content.md`, copy the completed review there, and record URL, platform, and publication date in `performance.md` from `templates/performance-record.md`.
-- Keep published `content.md` immutable. For subsequent measurement windows, create `performance-<captured-at>-<measurement-window>.md` beside it using the same template; never replace an earlier measurement. A correction to published text needs a separately identified record linked to the original.
-- If an approved or published target already exists, stop and ask for a new revision identifier rather than overwrite it.
+## Publication and measurement
 
-The harness must never publish automatically in v0.1.
+- Publishing remains manual. Only after a human reports actual publication, save the exact public text as outputs/<content-id>/<platform>-published-v<N>.md.
+- Record publication URL, date, platform, approved snapshot, and published snapshot in a dated review entry. If the public text differs, preserve that fact and obtain factual review of the actual version; do not infer approval from an earlier variant.
+- Use templates/performance-record.md to create performance-<platform>-<captured-at>-<measurement-window>.md in the same run. Record only observed results.
+- Each later measurement gets a new filename. Keep published text immutable; any correction needs a new identified snapshot linked to its predecessor.
+- Keep feedback beside the content it concerns. Do not duplicate reviews into separate status folders.

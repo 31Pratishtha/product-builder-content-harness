@@ -1,6 +1,7 @@
 ---
 content_id:
 platform:
+published_snapshot:
 published_at:
 captured_at:
 measurement_window:

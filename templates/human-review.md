@@ -12,6 +12,8 @@ Repeat the entire platform review section below for each requested platform. Eac
 - Reviewed at:
 - Outcome: pending
 - Selected variant and final-copy path:
+- Approved snapshot path:
+- Published snapshot path, URL, and publication date (only after actual publication):
 
 ### Scores
 
@@ -47,6 +49,10 @@ Be specific.
 
 What, if anything, should be considered during the weekly learning review?
 
+For each candidate, link the evidence and record the observation, interpretation, alternative explanations, scope, confidence, and proposed destination. Leave promotion pending. Record wins, failures, and root-cause hypotheses here when relevant rather than in parallel memory logs.
+
 ### Final decision
 
 Choose: approve, approve-with-edits, revise, reject, or hold.
+
+Append a new dated platform review for later revisions or decisions; preserve earlier entries. Approval identifies the exact reviewed variant and does not carry forward to later edits.

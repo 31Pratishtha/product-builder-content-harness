@@ -1,60 +1,55 @@
 # Product Builder Content Harness
 
-This repository is the source of truth for how our team turns product-building work into useful public content.
+Turn genuine product-building work into useful public content with evidence, a consistent voice, and human judgment.
 
-The harness combines:
+## Structure
 
-- stable brand context;
-- audience hypotheses;
-- platform-specific rules;
-- repeatable workflows;
-- evaluation rubrics;
-- human review;
-- evidence-based memory.
+| Location | Responsibility |
+| --- | --- |
+| AGENTS.md | Shared operating rules, evidence gates, and history protection |
+| brand/ | Audience, identity, values, voice, and claim boundaries |
+| strategy/ | Content pillars and topic selection |
+| knowledge/ | Reusable facts about our products and team |
+| platforms/ | Guidance for requested destinations |
+| workflows/ | Generation, review, and approved learning |
+| templates/ | Reusable briefs, source records, reviews, and measurements |
+| evals/ | Rubrics, pilot plan, and real evaluation records |
+| inputs/ | Original brainstorms, briefs, transcripts, and source notes |
+| outputs/ | One stable directory per content ID |
+| memory/ | Learning policy, approved decision history, and dated learning reviews |
 
-## What this repository is for
+## Operating loop
 
-We use it to turn ideas, build logs, product decisions, failures, user research, and source material into content for LinkedIn, X, and eventually long-form platforms.
+1. Capture a dated note in `inputs/`. Raw brainstorms may be incomplete; identify new notes with `input_type: brainstorm`.
+2. For generation, create a new brief using `templates/content-brief.md` or `templates/source-record.md`. Link the original note and preserve it. Require content ID, owner, requested platforms, confidentiality, and adequate evidence.
+3. Run `workflows/generate-content.md` with the input path.
+4. Review `outputs/<content-id>/human-review.md`. Each platform has its own decision and exact selected variant.
+5. Use `workflows/review-and-publish.md` to save approved and actually published snapshots beside the drafts.
+6. Record audience feedback and dated performance measurements in the same run.
+7. Use `workflows/learn-from-feedback.md` to propose durable changes. Apply them only after explicit human approval.
 
-We are not trying to automate publishing or remove human judgment. We are trying to make good thinking reusable and make the path from experience to publishable content more reliable.
+Files stay at stable paths. Review status belongs in the run's human review; do not move inputs or outputs between status directories.
 
-## Current operating loop
-
-1. Copy `templates/content-brief.md` or `templates/source-record.md` into `inputs/inbox/`.
-2. Fill every required field. Mark unknowns explicitly.
-3. Ask Codex to run the relevant workflow in `workflows/`.
-4. Review the generated pack in `outputs/drafts/<content-id>/`.
-5. Record edits and decisions using `templates/human-review.md`.
-6. Copy accepted final variants to `outputs/approved/<content-id>/<platform>/`, preserving drafts and evaluations.
-7. After manual publishing, save exact public text and performance records in `outputs/published/<content-id>/<platform>/`.
-8. Run `workflows/learn-from-feedback.md` weekly.
-
-## Non-negotiables
-
-- Human review is required before publishing.
-- The harness must not invent experience, results, users, quotes, or certainty.
-- One observation is not a durable rule.
-- Published copy is preserved exactly; do not overwrite history.
-- Brand and workflow changes must cite the evidence that motivated them.
-
-## Initial platforms
-
-LinkedIn and X are active. Long-form is experimental and should be generated only when requested.
-
-## Getting started
-
-The brand and project context are initial working hypotheses. Voice examples illustrate style; they are not evidence of team experience.
-
-Before calibration, record two real pieces made through the team's normal process in `experiments/baseline/`, including time, major edits, reviewer scores, and final copy. Baselines, pilot runs, publishing, learning reviews, and teammate invitations are still pending.
-
-Fill a brief in `inputs/inbox/`, then ask the agent:
+## Start a run
 
 ```text
-Run workflows/idea-to-content-pack.md using inputs/inbox/<content-id>.md.
-Generate only the requested platforms and use supported claims.
-Write the pack to outputs/drafts/<content-id>/ and leave canonical files unchanged.
+Run workflows/generate-content.md using inputs/<dated-input>.md.
+Generate only the requested platforms using supported claims.
+Write a new pack to outputs/<content-id>/.
 ```
 
-Replace `<content-id>` with the actual brief ID. For substantial sources, use `workflows/source-to-content-pack.md` instead. These are agent instructions, not executable commands or automated access controls.
+Idea, substantial source, and repurposing inputs use the same workflow with different evidence checks. LinkedIn and X are active when requested; long-form is opt-in.
 
-See `VALIDATION.md` for scaffold checks and documented clarifications. The original implementation plan is retained unchanged as background; the scaffold includes the agreed clarifications.
+## Context and evaluation
+
+The workflow defines context by stage. Read only relevant knowledge and requested platform guidance. Read referenced sources completely; do not replace evidence with an unsupported summary. Record the files actually loaded in source-analysis.md. Stable file storage does not itself guarantee lower token use.
+
+Use `evals/pilot-plan.md` for the initial pilot. Record two manual baselines as `evals/baseline-<id>.md` when they are performed. Add real regression cases and results as dated files under evals; create subdirectories only when their volume requires them. No baseline or publishing results are implied by the scaffold.
+
+The files are agent instructions, not executable enforcement. Humans own factual approval, positioning, taste, and publication.
+
+## Migrated history
+
+See `VALIDATION.md` for the September 27 migration and old-to-new path mapping. Existing inputs and run artifacts retain their original text and filenames, including historical path references and the original memory-candidates.md. New runs use versioned draft filenames and review-local proposals.
+
+The supplied implementation plan and earlier changelog entries describe previous versions and remain historical references.
